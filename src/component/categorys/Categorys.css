@@ -1,0 +1,38 @@
+.category{
+    width:100%;
+    height: 120px;
+    margin-top: 70px;
+    padding: 0 10%;
+}
+.cat-box{
+    margin-top: 50px;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.food{
+    width: 22%;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 5px;
+}
+.food:hover{
+    margin-bottom: 10px;
+    box-shadow: 20px 20px 50px -20px grey;
+
+}
+.food img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.food h3{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: white;
+}
