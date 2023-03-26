@@ -1,6 +1,6 @@
 .category{
     width:100%;
-    height: 120px;
+    height: 300px;
     margin-top: 70px;
     padding: 0 10%;
 }
@@ -21,7 +21,7 @@
 }
 .food:hover{
     margin-bottom: 10px;
-    box-shadow: 20px 20px 50px -20px grey;
+    box-shadow: 20px 20px 50px -20px rgb(115, 115, 115);
 
 }
 .food img{
@@ -70,11 +70,17 @@
 }
 
 @media screen and (max-width:700px) {
+    .category{
+        height: 350px;
+    }
     .food{
         width: 45%;
     }
 }
 @media screen and (max-width:450px) {
+    .category{
+        height: 600px;
+    }
     .food{
         width: 80%;
     }

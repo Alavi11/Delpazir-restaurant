@@ -1,0 +1,39 @@
+.Discribtion{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+.Discribtion p{
+    text-align: center;
+    width: 60%;
+    margin-top: 50px;
+}
+
+@media screen and (max-width:1000px) {
+    .Discribtion p{
+        width: 90%;
+    }
+}
+@media screen and (max-width:700px) {
+    .Discribtion h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:450px) {
+    .Discribtion h2{
+        font-size: 15px;
+    }
+    .Discribtion p{
+        font-size: 12px;
+    }
+
+}
+@media screen and (max-width:350px) {
+    .Discribtion h2{
+        font-size: 12px;
+    }
+}

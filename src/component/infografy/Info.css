@@ -1,0 +1,53 @@
+.inf{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logos{
+    width: 50%;
+    direction: ltr;
+}
+.inf-g{
+    width: 50%;
+}
+.inf-g p{
+    width: 70%;
+    color: #a1a1a1;
+}
+
+@media screen and (max-width:800px) {
+    .inf{
+        flex-wrap: wrap;
+    }
+    .logos{
+        width: 100%;
+        text-align: center;
+    }
+    .inf-g{
+        width: 100%;
+        text-align: center;
+    }
+    .inf-g p{
+        width: 100%;
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width:700px) {
+    .inf{
+        height: 200px;
+    }
+    .logos img{
+        width: 100px;
+        height: 100px;
+    }
+    .inf-g p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:450px) {
+    .inf{
+        height: 250px;
+    }
+}
