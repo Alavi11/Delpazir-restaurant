@@ -1,0 +1,126 @@
+.Detail{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.Detail-cart{
+    position: absolute;
+    right:17.5%;
+    top: 10%;
+    width: 50%;
+    height: 40vh;
+    background:linear-gradient(45deg,rgba(168, 93, 50, 0.405),rgba(255, 217, 0,0.405));;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    direction: rtl;
+}
+.Detail-cart-disc{
+    width: 50%;
+    height: 75%;
+    direction: rtl;
+    padding: 20px 20px;
+}
+.Detail img{
+    width: 45%;
+    height: 30vh;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.Detail-cart-disc button{
+    width: 70px;
+    height: 30px;
+    background-color: coral;
+    border: none;
+    margin-top: 50px;
+    color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 10%;
+    bottom: 12%;
+}
+.Detail-cart-disc button:hover{
+    color: coral;
+    background-color: #fff ;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1400px) {
+    .Detail-cart{
+        width: 60% !important;
+        /* height: 40vh; */
+    }
+}
+@media screen and (max-width:1100px) {
+    .Detail-cart{
+        width: 70% !important;
+    }
+}
+@media screen and (max-width:930px) {
+    .Detail-cart{
+        width: 80% !important;
+        right:10%;
+    }
+}
+@media screen and (max-width:800px) {
+    .Detail-cart{
+        width: 90% !important;
+        right:5%;
+    }
+}
+@media screen and (max-width:720px) {
+    .Detail-cart{
+        width: 100% !important;
+        right:0%;
+    }
+}
+@media screen and (max-width:650px) {
+    .Detail-cart{
+        flex-direction: column;
+        height: 60vh;
+    }
+    .Detail-cart img{
+        margin-top: 50px;
+        width: 65%;
+        height: 50vh;
+        margin-right: 0px;
+    }
+    .Detail-cart-disc button{
+        bottom: 8%;
+    }
+    .Detail-cart-disc button{
+        position: relative;
+        margin-right: 20%;
+    }
+    .Detail-cart-disc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70% ;
+    }
+    
+}
+@media screen and (max-width:470px) {
+    .Detail-cart-disc{
+        width: 100%;
+    }
+    .Detail-cart-disc h1{
+        font-size: 22px;
+    }
+    .Detail-cart-disc p{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        text-align: center;
+    }
+    .Detail-cart-disc h2{
+        font-size: 22px;
+    }
+    .Detail-cart img{
+        width: 90%;
+        height: 70vh;
+    }
+}
