@@ -2,9 +2,15 @@ import "./Header.css"
 import React from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import {useSelector} from "react-redux"
 
 const Header = () => {
+
+  const cart = useSelector((store)=>store)
+
+  let numberoforders = cart.length;
+
+
   return <>
     <div className="header">
         <div className="log-reg">
@@ -14,9 +20,15 @@ const Header = () => {
         <div className="brand">
             <h1>دلپذیر</h1>
         </div>
-        <div className="basket-shop">
-            <FaShoppingCart/>
-        </div>
+        <Link to={"/basket"}>
+            <div className="basket-shop">
+                <FaShoppingCart/>
+                {
+                  numberoforders ? <p>{numberoforders}</p> :<></>
+                }
+            </div>
+        </Link>
+        
     </div>
   </>
 }

@@ -6,7 +6,7 @@ import {useSelector,useDispatch} from "react-redux"
 
 const Details = () => {
 
-  const cart = useSelector((store)=>store)
+  // const cart = useSelector((store)=>store)
   const dispatch = useDispatch()
 
   const item = useParams();
@@ -15,7 +15,8 @@ const Details = () => {
     return  element.id === parseInt(item.id)
   })
 
-  return <>
+
+return <>
           <div className="Detail">
                 <div className="Detail-cart">
                   <img src={food[0].img}/>

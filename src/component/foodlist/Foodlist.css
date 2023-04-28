@@ -1,0 +1,88 @@
+.foodlist{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px;
+    flex-wrap: wrap;
+}
+.food-details{
+    width: 20%;
+    height: 400px;
+    background-color: orangered;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding-top: 15px;
+    flex-wrap: wrap;
+}
+.food-details img{
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+}
+.food-details p{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.food-details button{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: orangered;
+    font-weight: 700;
+}
+.food-details button:hover{
+    background-color: #fff;
+}
+
+@media screen and (max-width:1400px) {
+    .food-details{
+        width: 25%;
+    }
+}
+@media screen and (max-width:1200px) {
+    .food-details{
+        width: 30%;
+    }
+}
+@media screen and (max-width:950px) {
+    .food-details{
+        width: 35%;
+        margin-right: 10px;
+    }
+    .foodlist{
+        padding: 50px 25px ;
+    }
+}
+@media screen and (max-width:724px) {
+    .food-details{
+        width: 40%;
+    }
+    .foodlist{
+        padding: 50px 20px ;
+    }
+}
+@media screen and (max-width:650px) {
+    .food-details{
+        width: 80%;
+        height: 350px ;
+        margin-right: 0px;
+    }
+    .foodlist{
+        padding: 50px 0px ;
+    }
+    .food-details img{
+        /* height: 0%; */
+    }
+}
+@media screen and (max-width:425px) {
+    .food-details{
+        width: 90%;
+    }
+}

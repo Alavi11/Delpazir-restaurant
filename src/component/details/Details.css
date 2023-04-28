@@ -9,7 +9,7 @@
     top: 10%;
     width: 50%;
     height: 40vh;
-    background:linear-gradient(45deg,rgba(168, 93, 50, 0.405),rgba(255, 217, 0,0.405));;
+    background:linear-gradient(45deg,rgba(255, 217, 0,0.405),rgb(255, 93, 39));
     border-radius: 10px;
     display: flex;
     align-items: center;
