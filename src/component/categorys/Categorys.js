@@ -34,7 +34,7 @@ const Categorys = () => {
                 {
                     category.map((item)=>{
                         return <>
-                            <Link to={`/${item.cat}`} className="food">
+                            <Link className="cat-box" to={`/${item.cat}`} className="food">
                                 <div>
                                     <img src={item.img}/>
                                     <h3>{item.sub}</h3>
