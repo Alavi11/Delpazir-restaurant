@@ -6,7 +6,7 @@ const category = [
     {
         img : "img/category/pizza.jpg",
         sub:"پیتزا",
-        cat:"pizaa"
+        cat:"pizza"
     },
     {
         img : "img/category/kebab.jpg",

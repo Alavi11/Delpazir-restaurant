@@ -1,20 +1,32 @@
 import "./Header.css"
-import React , {useState} from 'react'
+import React , {useEffect, useState} from 'react'
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import {useSelector} from "react-redux"
-import Search from "../search/Search";
+import {useNavigate} from "react-router-dom"
 
 const Header = () => {
 
-  const [islogin , setIslogin] = useState(true);
+  let navigate = useNavigate()
+
+  const [islogin , setIslogin] = useState(false);
+
+  useEffect(()=>{
+    const login = localStorage.getItem("phone");
+    if(login){
+      setIslogin(true)
+    }
+  },[])
 
   const cart = useSelector((store)=>store)
 
   let numberoforders = cart.length;
 
   const logout=()=>{
-
+    localStorage.clear()
+    setIslogin(false)
+    window.location.reload()
+    navigate("/")
   }
 
   return <>
@@ -47,7 +59,7 @@ const Header = () => {
             </div>
         </Link>
     </div>
-    {islogin ? <></> : <Search/>}
+    
   </>
 }
 

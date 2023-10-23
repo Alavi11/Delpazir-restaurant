@@ -1,0 +1,17 @@
+.edditfood{
+    width: 50%;
+    height: 100%;
+}
+.editfood{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width : 1250px) {
+    .editfood{
+        width: 100%;
+    }
+}

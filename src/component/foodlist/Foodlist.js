@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link, useParams} from "react-router-dom"
-import food from "../data/Food"
 import "./Foodlist.css"
+import axios from 'axios'
+
 
 const Foodlist = () => {
   let {name} = useParams()
+
+  const [food,setFood]=useState([])
+
+  let regex = new RegExp(name, "gi")
+
+
+  useEffect(()=>{
+    axios.get("http://localhost:3001/getfood")
+    .then(res=>{
+        let result = res.data.filter(item => item.Category.match(name))
+        setFood(result)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
+  ,[])
+
+
+  const localfood =()=>{
+    localStorage.setItem("foodlist",JSON.stringify(food))
+  }
 
 
   return <>
@@ -12,10 +34,12 @@ const Foodlist = () => {
             {
               food.map((item)=>{
                 return  <div className="food-details">
-                            <img src={item.img}/>
-                            <p>{item.name}</p>
-                            <p>قیمت : {item.price} تومان</p>
-                            <Link to={`/${name}/${item.id}`} style={{width:"100%" , textAlign:"center",height:"30px"}}><button>خرید</button></Link>
+                            <img src={item.Picture}/>
+                            <p>{item.Name}</p>
+                            <p>قیمت : {item.Price} تومان</p>
+                            <Link to={`/${name}/${item.ID}`} style={{width:"100%" , textAlign:"center",height:"30px"}}>
+                            <button onClick={localfood}
+                            >خرید</button></Link>
                         </div>
               })
             }

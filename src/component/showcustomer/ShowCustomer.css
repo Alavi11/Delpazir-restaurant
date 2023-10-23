@@ -1,0 +1,131 @@
+.showcustomer{
+    width: 100%;
+    height: 100%;
+    padding: 30px 10px;
+    display: flex;
+}
+.members{
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 10px;
+    background-color: orangered;
+    color: white;
+    margin-top: 10px;
+}
+.members button{
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 25px;
+    cursor: pointer;
+}
+.memberlist{
+    width: 70%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.addmember{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.addmember form{
+    width: 250px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: orangered;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.inf-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.addmember form input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255) !important;
+    direction: rtl;
+}
+.addmember form button{
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: orangered;
+    font-size: 20px;
+}
+.addmember form button:hover{
+    background-color: #ffe4e4;
+    cursor: pointer;
+}
+.register-password{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color:#fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    direction: rtl;
+
+}
+.showpassword:hover{
+    cursor: pointer;
+}
+.register-password input{
+   margin:0 !important ;
+   background-color: transparent;
+}
+.searchuser{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+}
+.searchuserbtn{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width:980px) {
+    .showcustomer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .memberlist{
+        width: 100%;
+        overflow-y: scroll;
+        order: 2;
+    }
+    .addmember{
+        width: 100%;
+        order: 1;
+        height: 115%;
+    }
+}

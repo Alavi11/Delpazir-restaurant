@@ -18,15 +18,16 @@
 }
 .basket-page-left{
     width: 30%;
-    height: 100vh;
+    height: 100vh;  
     margin-top: 70px;
     display: flex;
     justify-content: center;
 }
 .basket-page-right{
     width: 70%;
-    height: 100vh;
     margin-top: 70px;
+    height: 100vh;
+    position: relative;
 }
 .cart-info-for-shopping{
     width: 90%;
@@ -60,7 +61,6 @@
 @media screen and (max-width:1400px) {
     .basket-cart{
         width: 80% !important;
-
     }
 }
 @media screen and (max-width:1200px) {
@@ -88,5 +88,13 @@
     }
     .basket{
         height: 65vh;
+    }
+    .basket-cart{
+        height: 85vh;
+        margin-bottom: 50%;        
+    }
+    .btntest{
+        right: 0;
+        margin-right: 0 !important;
     }
 }

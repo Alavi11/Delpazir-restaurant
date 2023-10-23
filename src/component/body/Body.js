@@ -7,6 +7,7 @@ import Slider from "../slider/Slider";
 import "./Body.css"
 
 
+
 const Body = () => {
   return <>
         <Slider/>

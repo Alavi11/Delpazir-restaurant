@@ -1,0 +1,140 @@
+.orders{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.orderscart{
+    width: 60%;
+    height: 190px;
+    background-color: rgb(203, 54, 0);
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px 20px;
+    color: white;
+    transition: all .5s;
+    overflow: hidden;
+}
+.show{
+    height: 500px !important;
+    overflow-y: scroll !important;
+}
+.orderscart div button{
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    color: orangered;
+    cursor: pointer;
+}
+
+.orderitems{
+    margin-top: 80px;
+    width: 100%;
+    height: 200px ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    color: black;
+}
+.orderitems img{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.editorderstatus{
+    z-index: 10;
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+
+@media screen and (max-width:1100px) {
+    .orderscart{
+        width: 80%;
+    }
+}
+@media screen and (max-width:860px) {
+    .orderscart{
+        width: 90%;
+    }
+}
+@media screen and (max-width:600px) {
+    .orderscart{
+        width: 100%;
+    }
+}
+@media screen and (max-width:370px) {
+    .orderscart div button{
+        width: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .editorderstatus{
+        top: 64%;
+        right: 30%;
+    }
+}
+@media screen and (max-width:630px) {
+    .editorderstatus{
+        right: 25%;
+    }
+}
+@media screen and (max-width:550px) {
+    .editorderstatus{
+        right: 20%;
+    }
+}
+@media screen and (max-width:460px) {
+    .editorderstatus{
+        right: 17%;
+    }
+}
+@media screen and (max-width:376px) {
+    .editorderstatus{
+        right: 10%;
+    }
+}
+@media screen and (max-width:321px) {
+    .editorderstatus{
+        right: 2.5%;
+    }
+}
+@media screen and (max-width:525px) {
+    .orderitems img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:480px) {
+    .orderitems img{
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+    }
+    .orderitems div p{
+       font-size: 13px;
+       font-weight: 800;
+    }
+}
+@media screen and (max-width:390px) {
+    .orderitems{
+        padding: 10px 10px;
+    }
+    .orderitems img{
+        display: none;
+    }
+     
+}

@@ -37,7 +37,7 @@
     color: #fff;
     border-radius: 10px;
     position: absolute;
-    left: 10%;
+    left: 12%;
     bottom: 12%;
 }
 .Detail-cart-disc button:hover{
@@ -78,12 +78,12 @@
 @media screen and (max-width:650px) {
     .Detail-cart{
         flex-direction: column;
-        height: 60vh;
+        height: 70vh;
     }
     .Detail-cart img{
         margin-top: 50px;
-        width: 65%;
-        height: 50vh;
+        width: 55%;
+        height: 30vh;
         margin-right: 0px;
     }
     .Detail-cart-disc button{

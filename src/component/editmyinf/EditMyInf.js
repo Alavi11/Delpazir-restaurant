@@ -1,89 +1,73 @@
-import React from 'react'
-import {useState,useEffect} from "react"
-import "./Register.css"
-import axios from "axios"
-import {useNavigate} from "react-router-dom"
+import React , {useState,useEffect} from 'react'
+import "./EditMyInf.css"
+import axios from 'axios'
 import { AiFillEyeInvisible,AiFillEye } from "react-icons/ai";
+import {useGlobalcontext} from "../../Context"
 
 
-const Register = () => {
+const EditMyInf = () => {
 
-  let navigate = useNavigate()
-
-  useEffect(()=>{
-    const login = localStorage.getItem("phone");
-    if(login){
-      navigate("/")
-    }
-  },[])
+    const {member} = useGlobalcontext()
 
 
-  const [showpassword,setShowpassword] = useState(false);
-  const [showReppassword,setShowReppassword] = useState(false);
+    const [firstname,setFirstname] = useState();
+    const [lastname,setLastname] = useState();
+    const [phone,setPhone] = useState();
+    const [pass,setPass] = useState();
+    const [role,setRole] = useState();
+    const [reapetpass,setReapetpass] = useState();
+    const [showpassword,setShowpassword] = useState(false);
+    const [showReppassword,setShowReppassword] = useState(false);
 
-  const [firstname,setFirstname] = useState();
-  const [lastname,setLastname] = useState();
-  const [phone,setPhone] = useState();
-  const [pass,setPass] = useState();
-  const [reapetpass,setReapetpass] = useState();
 
-  const Register = async (e) =>{
-    e.preventDefault()
-    if(!firstname){
-      alert("مقادیر را وارد کنید")
-      return
-    }
-    if(!lastname){
-      alert("مقادیر را وارد کنید")
-      return
-    }
-    if(!phone){
-      alert("مقادیر را وارد کنید")
-      return
-    }
-    if(phone.length !== 11){
-      alert("شماره موبایل باید ۱۱ رقمی باشد")
-      return
-    }
-    if(!pass){
-      alert("مقادیر را وارد کنید")
-      return
-    }
-    if(pass === reapetpass){
+    console.log(member);
+
+
+    const edit = async (e) =>{
+        e.preventDefault();
         let data = {
           firstname,
           lastname,
+          role,
           phone,
-          role:"User",
           pass
         }
-        await axios.post("http://localhost:3001/register", data)
+        if(!data.firstname){
+            data.firstname = member[0].FirstName
+        }
+        if(!data.lastname){
+            data.lastname = member[0].LastName
+        }
+        if(!data.role){
+            data.role = member[0].AccessLevel
+        }
+        if(!data.phone){
+            data.phone = member[0].PhonNumber
+        }
+        if(!data.pass){
+            data.pass = member[0].Password
+        }
+        await axios.post("http://localhost:3001/edituser",data)
         .then((res)=>{
           console.log(res);
-          res.data[0].status ?  alert("با موفقیت ثبت نام شدید" )  : alert(res.data[0].message)
-          if(res.data[0].status === true){
-            localStorage.setItem("phone",res.data[0].PhonNumber)
-            localStorage.setItem("firstname",res.data[0].FirstName)
-            localStorage.setItem("lastname",res.data[0].LastName)
-            localStorage.setItem("access",res.data[0].AccessLevel)
-            navigate("/")
-            window.location.reload()
-          }
-       })
+          alert("با موفقیت ویرایش شد" )
+      })
         .catch((err)=>{
           console.log(err);
         })
-    }
-    else{
-      alert("رمز عبور منطبق نیست !!!")
-    }
-  }
+      }
+
+
 
 
   return <>
-        <div className="register">
-        <div className="register-box">
-                  <form>
+        <div className='editmyinf'>
+                            <div className='members'>
+                                   <p>نام : {member[0].FirstName}</p>
+                                   <p>نام خانوادگی : {member[0].LastName}</p>
+                                   <p> موبایل : {member[0].PhonNumber}</p>
+                            </div>
+                <form>
                     <div className="inf-box">
                         <input onChange={(e)=>{setFirstname(e.target.value)}} type={"text"} placeholder="نام"></input>
                         <input onChange={(e)=>{setLastname(e.target.value)}} type={"text"} placeholder="نام خانوادگی"></input>
@@ -105,11 +89,11 @@ const Register = () => {
                           </div>
                         </div>  
                     </div>
-                    <button onClick={Register} type='submit'>ورود</button>
+                    <button onClick={edit}>اعمال</button>
                   </form>
+
         </div>
-     </div>
   </>
 }
 
-export default Register
+export default EditMyInf

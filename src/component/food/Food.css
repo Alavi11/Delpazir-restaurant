@@ -1,0 +1,58 @@
+.foodcomp{
+    width: 100%;
+    height: 88.3%;
+    display: flex;
+}
+.addfood{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+.addfoodform{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    background-color:orangered ;
+}
+.addfoodform input{
+    width: 90%;
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+.addfoodform button{
+    width: 90%;
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 1250px) {
+    .foodcomp{
+        flex-wrap: wrap;
+    }
+    .addfood{
+        width: 100%;
+    }
+    .edditfood{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width : 1250px) {
+    .addfoodform{
+        width: 80%;
+    }
+}

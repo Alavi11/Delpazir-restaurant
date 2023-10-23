@@ -1,0 +1,74 @@
+.foodlistedit{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+.editfoods{
+    display: flex;
+    background-color: orangered;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.editfoods-photo{
+    width: 40%;
+    height: 100%;
+    padding: 10px 10px;
+}
+.editfoods-photo img{
+    width: 100%;
+    border-radius: 10px;
+}
+.editfoods-det{
+    width: 60%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    color: white;
+    font-weight: bolder;
+    padding-right: 10px;
+    position: relative;
+}
+.editfoods-det button{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+
+}
+@media screen and (max-width : 1250px) {
+    .foodlistedit{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width : 500px) {
+    .editfoods-det button{
+        left: 10px;
+        bottom: 10px;
+        width: 90px;
+        height: 25px;
+    }
+}
+@media screen and (max-width : 430px) {
+    .editfoods-det button{
+        font-size: 10px;
+        width: 80px;
+        height: 20px;
+    }
+    .editfoods-det p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width : 430px) {
+    .editfoods-det button{
+        left: 5px;
+        bottom: 5px;
+        width: 70px;
+    }
+    .editfoods-det p{
+        font-size: 12px;
+    }
+}
